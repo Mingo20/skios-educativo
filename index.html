@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skios Educativo | El fin de la burocracia para los docentes dominicanos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0A0A0A',
+                            dark: '#121212',
+                            card: '#1A1A1A',
+                            border: '#2A2A2A',
+                            green: '#10B981',
+                            greenHover: '#059669',
+                            grayLight: '#E5E7EB',
+                            grayText: '#9CA3AF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Sora', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0A0A0A; color: #F3F4F6; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Sora', sans-serif; }
+        .green-glow { box-shadow: 0 0 40px -5px rgba(16, 185, 129, 0.15); }
+        .green-glow-intense { box-shadow: 0 0 50px 0px rgba(16, 185, 129, 0.35); }
+        .blur-radial-1 { background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(0,0,0,0) 70%); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #10B981; }
+        .step-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="relative min-h-screen">
+
+    <div class="absolute top-0 left-1/4 w-[600px] h-[600px] blur-radial-1 -z-10 pointer-events-none"></div>
+    <div class="absolute top-1/2 right-0 w-[500px] h-[500px] blur-radial-1 -z-10 pointer-events-none"></div>
+    <div class="absolute bottom-10 left-10 w-[700px] h-[700px] blur-radial-1 -z-10 pointer-events-none"></div>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-black/80 border-b border-brand-border transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-green to-emerald-800 flex items-center justify-center text-white font-bold text-xl shadow-lg green-glow">S</div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white">SKIOS<span class="text-brand-green">.</span></span>
+                    <span class="text-xs block text-brand-grayText -mt-1 tracking-wider uppercase">Educativo RD</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-grayText">
+                <a href="#como-funciona" class="hover:text-white transition-colors">¿Cómo funciona?</a>
+                <a href="#simulador" class="hover:text-white transition-colors">Simulador WhatsApp</a>
+                <a href="#beneficios" class="hover:text-white transition-colors">Beneficios</a>
+                <a href="#solicitud" class="hover:text-white transition-colors">Casos de Éxito</a>
+            </nav>
+            <div>
+                <a href="#solicitud" class="relative inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-brand-green rounded-xl transition-all duration-300 hover:bg-brand-greenHover hover:scale-[1.02] shadow-md green-glow">Solicitar mi Agente</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/20 text-brand-green text-xs font-semibold uppercase tracking-wider mx-auto lg:mx-0">
+                        <i class="fa-solid fa-graduation-cap"></i> Exclusivo para Docentes de República Dominicana
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tight">
+                        Elimina el <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-400">100% de tu carga administrativa</span> en WhatsApp
+                    </h1>
+                    <p class="text-lg md:text-xl text-brand-grayText max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Un sistema operativo real para maestros. Deja que tu propio Agente de Inteligencia Artificial planifique clases, cree rúbricas, diseñe exámenes y pase asistencia. Vuelve a disfrutar la enseñanza.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#solicitud" class="px-8 py-4 bg-brand-green hover:bg-brand-greenHover text-white font-bold rounded-xl text-center shadow-lg transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2 green-glow">
+                            <i class="fa-solid fa-sparkles"></i> Activar mi Agente Gratis
+                        </a>
+                        <a href="#simulador" class="px-8 py-4 bg-brand-dark hover:bg-brand-card text-brand-grayLight border border-brand-border font-semibold rounded-xl text-center transition-all duration-300 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-brand-green"></i> Ver Demostración en Vivo
+                        </a>
+                    </div>
+                    <div class="pt-8 border-t border-brand-border/60 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-left">
+                        <div><span class="block text-2xl md:text-3xl font-extrabold text-white">100%</span><span class="text-xs text-brand-grayText">Alineado al Currículo MINERD</span></div>
+                        <div><span class="block text-2xl md:text-3xl font-extrabold text-white">-30 Hrs</span><span class="text-xs text-brand-grayText">Semanales de Papeleo</span></div>
+                        <div><span class="block text-2xl md:text-3xl font-extrabold text-white">24/7</span><span class="text-xs text-brand-grayText">Disponibilidad Inmediata</span></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative w-full flex justify-center">
+                    <div class="relative w-full max-w-[380px] md:max-w-[420px] bg-brand-dark border border-brand-border p-6 rounded-3xl shadow-2xl green-glow">
+                        <div class="flex items-center justify-between pb-4 border-b border-brand-border mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-green/20 flex items-center justify-center text-brand-green"><i class="fa-solid fa-brain"></i></div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Mi Agente Skios</h4>
+                                    <p class="text-xs text-brand-green flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse"></span> Activo • Orquestando 42 Skills</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-brand-grayText font-mono">v3.5 PRO</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="p-3 bg-brand-black/60 rounded-xl border border-brand-border flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-sm"><i class="fa-solid fa-file-signature"></i></div>
+                                    <div><p class="text-xs font-bold text-white">Skill: Planificación Curricular</p><p class="text-[10px] text-brand-grayText">Alineando a Currículo Primaria</p></div>
+                                </div>
+                                <span class="text-[10px] bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded-full font-bold">Éxito</span>
+                            </div>
+                            <div class="p-3 bg-brand-black/60 rounded-xl border border-brand-border flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-sm"><i class="fa-solid fa-table-list"></i></div>
+                                    <div><p class="text-xs font-bold text-white">Skill: Rúbricas Inteligentes</p><p class="text-[10px] text-brand-grayText">Generando escala de estimación</p></div>
+                                </div>
+                                <span class="text-[10px] bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded-full font-bold">Éxito</span>
+                            </div>
+                            <div class="p-3 bg-brand-black/60 rounded-xl border border-brand-border flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-brand-green flex items-center justify-center text-sm"><i class="fa-solid fa-folder-open"></i></div>
+                                    <div><p class="text-xs font-bold text-white">Skill: Google Drive Sync</p><p class="text-[10px] text-brand-grayText">Exportando PDFs a Carpeta Oficial</p></div>
+                                </div>
+                                <span class="text-[10px] bg-emerald-500/10 text-brand-green px-2 py-0.5 rounded-full font-bold">Sincronizado</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-brand-border text-center">
+                            <p class="text-xs text-brand-grayText mb-3">La redistribución del tiempo del docente:</p>
+                            <div class="flex gap-2 h-6 rounded-full overflow-hidden bg-brand-black border border-brand-border p-0.5">
+                                <div class="h-full bg-brand-green rounded-full text-[9px] text-white flex items-center justify-center font-bold" style="width: 85%;">85% Enseñar</div>
+                                <div class="h-full bg-red-500/30 rounded-full text-[9px] text-red-300 flex items-center justify-center font-bold" style="width: 15%;">15% Admin</div>
+                            </div>
+                            <span class="text-[10px] text-brand-green block mt-2 font-mono"><i class="fa-solid fa-arrow-trend-up"></i> +250% más tiempo real de calidad docente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOLOR DEL DOCENTE -->
+    <section class="py-20 bg-brand-dark/50 border-y border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">¿Sabías que gastas más tiempo en burocracia que enseñando?</h2>
+                <p class="text-lg text-brand-grayText">El sistema tradicional te obliga a ser un capturador de datos. Skios te devuelve tu vocación de educador.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+                <div class="p-8 rounded-2xl bg-brand-black border border-red-900/30 space-y-6 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-face-frown"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">El Panorama Tradicional en RD</h3>
+                        <p class="text-sm text-brand-grayText mb-6">Planificaciones los fines de semana, reportes interminables, cuadernos de asistencia físicos y digitales, rúbricas que toman horas redactar.</p>
+                        <ul class="space-y-3 text-sm text-brand-grayText">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i> 40% del tiempo semanal en planificación teórica.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i> 30% en registro, control de asistencia y planillas.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-xmark text-red-500"></i> Frustración, cansancio y desvelo los domingos.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-brand-border text-red-400 font-bold text-lg">Solo 30% del tiempo real enseñando.</div>
+                </div>
+                <div class="p-8 rounded-2xl bg-brand-black border border-brand-green/30 space-y-6 flex flex-col justify-between green-glow">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-green/10 text-brand-green flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-face-laugh-beam"></i></div>
+                        <h3 class="text-xl font-bold text-white mb-2">El Ecosistema Skios Educativo</h3>
+                        <p class="text-sm text-brand-grayText mb-6">Envía un audio por WhatsApp. Tu agente ejecuta las tareas usando un motor determinista. Genera y guarda todo ordenadamente en tu Google Drive.</p>
+                        <ul class="space-y-3 text-sm text-brand-grayText">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green"></i> Planificaciones mensuales y semanales completas en segundos.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green"></i> Rúbricas analíticas listas para imprimir.</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-green"></i> Registro automático de asistencia mediante dictado por voz.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 border-t border-brand-border text-brand-green font-bold text-lg flex items-center justify-between">
+                        <span>Hasta 85% - 90% del tiempo enseñando.</span>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADOR WHATSAPP -->
+    <section id="simulador" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-semibold uppercase"><i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp es la interfaz</div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Pruébalo ahora: Envía una orden a tu agente</h2>
+                    <p class="text-brand-grayText leading-relaxed">No necesitas instalar programas complejos. Si sabes usar notas de voz de WhatsApp, ya sabes dominar todo el ecosistema de Skios.</p>
+                    <p class="text-sm text-brand-green font-medium">👉 Haz clic en cualquiera de las siguientes órdenes típicas de un docente:</p>
+                    <div class="flex flex-col gap-3 pt-4">
+                        <button onclick="triggerSim('planificacion')" class="text-left p-4 rounded-xl bg-brand-dark hover:bg-brand-card border border-brand-border transition-all duration-300 hover:border-brand-green flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-brand-green/10 text-brand-green flex items-center justify-center text-sm"><i class="fa-solid fa-calendar-day"></i></span>
+                                <div><span class="block text-sm font-semibold text-white group-hover:text-brand-green">"Planificar matemáticas de 5to..."</span><span class="text-xs text-brand-grayText">Planificación mensual alineada a MINERD</span></div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-xs text-brand-grayText group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button onclick="triggerSim('rubrica')" class="text-left p-4 rounded-xl bg-brand-dark hover:bg-brand-card border border-brand-border transition-all duration-300 hover:border-brand-green flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-brand-green/10 text-brand-green flex items-center justify-center text-sm"><i class="fa-solid fa-table-list"></i></span>
+                                <div><span class="block text-sm font-semibold text-white group-hover:text-brand-green">"Generar rúbrica de exposición..."</span><span class="text-xs text-brand-grayText">Escala estimativa con indicadores clave</span></div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-xs text-brand-grayText group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button onclick="triggerSim('asistencia')" class="text-left p-4 rounded-xl bg-brand-dark hover:bg-brand-card border border-brand-border transition-all duration-300 hover:border-brand-green flex items-center justify-between group">
+                            <div class="flex items-center gap-3">
+                                <span class="w-8 h-8 rounded-lg bg-brand-green/10 text-brand-green flex items-center justify-center text-sm"><i class="fa-solid fa-user-check"></i></span>
+                                <div><span class="block text-sm font-semibold text-white group-hover:text-brand-green">"Registrar asistencia de hoy..."</span><span class="text-xs text-brand-grayText">Actualización de registro en tiempo real</span></div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-xs text-brand-grayText group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 flex justify-center w-full">
+                    <div class="w-full max-w-[460px] bg-[#0E171E] border border-brand-border rounded-2xl overflow-hidden shadow-2xl flex flex-col h-[580px] text-white">
+                        <div class="bg-[#1F2C34] px-4 py-3 flex items-center justify-between border-b border-[#2d3d46]">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center text-white text-lg font-bold"><i class="fa-solid fa-robot"></i></div>
+                                <div><h3 class="text-sm font-bold text-white">EduAgent Skios RD</h3><p class="text-xs text-brand-green">en línea y escuchando...</p></div>
+                            </div>
+                            <div class="flex gap-4 text-brand-grayText text-sm">
+                                <i class="fa-solid fa-phone cursor-pointer hover:text-white transition-colors"></i>
+                                <i class="fa-solid fa-video cursor-pointer hover:text-white transition-colors"></i>
+                                <i class="fa-solid fa-ellipsis-vertical cursor-pointer hover:text-white transition-colors"></i>
+                            </div>
+                        </div>
+                        <div id="chat-area" class="flex-1 p-4 overflow-y-auto space-y-4 bg-cover bg-center" style="background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');">
+                            <div class="max-w-[85%] bg-[#202C33] rounded-2xl p-3 text-sm text-white self-start relative">
+                                ¡Saludos, Colega Docente! 🇩🇴 Soy tu Agente Educativo de Skios.<br><br>
+                                ¿Qué tarea administrativa delegamos hoy? Haz clic en una de las opciones sugeridas para ver cómo lo resuelvo.
+                                <span class="block text-[10px] text-brand-grayText text-right mt-1">9:10 AM</span>
+                            </div>
+                        </div>
+                        <div class="bg-[#1F2C34] p-3 flex items-center gap-3 border-t border-[#2d3d46]">
+                            <i class="fa-regular fa-face-smile text-brand-grayText text-xl cursor-pointer hover:text-white"></i>
+                            <i class="fa-solid fa-paperclip text-brand-grayText text-xl cursor-pointer hover:text-white"></i>
+                            <div class="flex-1 bg-[#2A3942] rounded-lg px-3 py-2 text-sm text-brand-grayText flex items-center justify-between">
+                                <span id="input-placeholder">Escribe o presiona una acción...</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center text-white cursor-pointer hover:bg-brand-greenHover transition-colors"><i class="fa-solid fa-microphone"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARQUITECTURA -->
+    <section id="como-funciona" class="py-24 bg-brand-dark border-t border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-20">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-semibold uppercase">La diferencia de Skios</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Cero alucinaciones. Ejecución 100% determinista.</h2>
+                <p class="text-lg text-brand-grayText">A diferencia de una IA común que "adivina", nuestra arquitectura separa la comprensión humana de la ejecución estricta.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="p-8 rounded-2xl bg-brand-black border border-brand-border space-y-6 relative hover:border-brand-green/30 transition-all duration-300">
+                    <div class="absolute -top-6 left-8 bg-brand-green text-brand-black font-extrabold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider">El "Maître" de Sala</div>
+                    <div class="w-14 h-14 rounded-2xl bg-brand-green/10 text-brand-green flex items-center justify-center text-2xl mb-2"><i class="fa-solid fa-comments"></i></div>
+                    <h3 class="text-2xl font-bold text-white">El Superagente Conversacional</h3>
+                    <p class="text-brand-grayText leading-relaxed">Escucha por WhatsApp. Entiende tu lenguaje dominicano, tu tono y tus necesidades pedagógicas. Traduce tu desorden cotidiano en requerimientos técnicos estructurados.</p>
+                    <p class="text-sm text-brand-grayText italic">"Es el que empatiza contigo y sabe qué se debe hacer."</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-brand-black border border-brand-border space-y-6 relative hover:border-brand-green/30 transition-all duration-300">
+                    <div class="absolute -top-6 left-8 bg-white text-brand-black font-extrabold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider">El Chef en la Cocina</div>
+                    <div class="w-14 h-14 rounded-2xl bg-white/10 text-white flex items-center justify-center text-2xl mb-2"><i class="fa-solid fa-gears"></i></div>
+                    <h3 class="text-2xl font-bold text-white">Skills Especializadas</h3>
+                    <p class="text-brand-grayText leading-relaxed">Código tradicional y matemático que ejecuta las tareas sin margen de error. Sigue el currículo oficial del MINERD de manera exacta. No improvisa.</p>
+                    <p class="text-sm text-brand-grayText italic">"Sigue la receta exacta para que el documento siempre sea óptimo."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFICIOS / ACCORDION -->
+    <section id="beneficios" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Todo tu portafolio docente automatizado</h2>
+                <p class="text-lg text-brand-grayText">Todas las habilidades que tu agente puede ejecutar de forma inmediata.</p>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-dark">
+                    <button onclick="toggleAccordion('acc-1')" class="w-full p-6 text-left flex items-center justify-between text-white font-bold text-lg hover:bg-brand-card transition-colors">
+                        <span class="flex items-center gap-3"><i class="fa-solid fa-file-signature text-brand-green"></i> Planificaciones de Clase (Alineadas MINERD)</span>
+                        <i id="icon-acc-1" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-1" class="hidden p-6 bg-brand-black/40 border-t border-brand-border text-brand-grayText text-sm space-y-4">
+                        <p>Tu agente tiene integradas las competencias fundamentales del diseño curricular vigente de RD.</p>
+                        <p class="font-bold text-white">¿Cómo se le pide?</p>
+                        <p class="font-mono bg-brand-dark p-3 rounded-lg text-brand-green">"EduAgent, planifícame el mes de Ciencias de la Naturaleza de 6to de Primaria, enfocándonos en la célula."</p>
+                    </div>
+                </div>
+                <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-dark">
+                    <button onclick="toggleAccordion('acc-2')" class="w-full p-6 text-left flex items-center justify-between text-white font-bold text-lg hover:bg-brand-card transition-colors">
+                        <span class="flex items-center gap-3"><i class="fa-solid fa-table-list text-brand-green"></i> Rúbricas Analíticas y de Evaluación</span>
+                        <i id="icon-acc-2" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-2" class="hidden p-6 bg-brand-black/40 border-t border-brand-border text-brand-grayText text-sm space-y-4">
+                        <p>Genera matrices de evaluación con criterios claros adaptados exactamente a las actividades planificadas.</p>
+                        <p class="font-bold text-white">¿Cómo se le pide?</p>
+                        <p class="font-mono bg-brand-dark p-3 rounded-lg text-brand-green">"Crea una rúbrica analítica en formato PDF para evaluar una maqueta del sistema solar en 5to de Primaria."</p>
+                    </div>
+                </div>
+                <div class="border border-brand-border rounded-xl overflow-hidden bg-brand-dark">
+                    <button onclick="toggleAccordion('acc-3')" class="w-full p-6 text-left flex items-center justify-between text-white font-bold text-lg hover:bg-brand-card transition-colors">
+                        <span class="flex items-center gap-3"><i class="fa-solid fa-user-check text-brand-green"></i> Control de Asistencia y Calificaciones</span>
+                        <i id="icon-acc-3" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div id="acc-3" class="hidden p-6 bg-brand-black/40 border-t border-brand-border text-brand-grayText text-sm space-y-4">
+                        <p>Dicta qué estudiantes faltaron. El agente actualiza la base de datos de tu escuela en Drive al instante.</p>
+                        <p class="font-bold text-white">¿Cómo se le pide?</p>
+                        <p class="font-mono bg-brand-dark p-3 rounded-lg text-brand-green">"Asistencia de hoy para 3ro de Secundaria: faltaron Luis Peralta y Altagracia Gómez."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="solicitud" class="py-24 bg-brand-dark/50 border-t border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-semibold uppercase">Paso Inicial</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Solicita tu Despliegue de Agente Educativo</h2>
+                <p class="text-lg text-brand-grayText">Completa este formulario. Te conectaremos directo a tu WhatsApp listo para el envío oficial.</p>
+            </div>
+            <div class="max-w-xl mx-auto bg-brand-black border border-brand-border p-8 rounded-2xl shadow-2xl relative green-glow">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-brand-border">
+                    <span class="text-xs font-semibold tracking-wider text-brand-grayText uppercase">Progreso de Solicitud</span>
+                    <div class="flex items-center gap-2">
+                        <span id="dot-step-1" class="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
+                        <span id="dot-step-2" class="w-2.5 h-2.5 rounded-full bg-brand-border"></span>
+                    </div>
+                </div>
+                <form id="agent-request-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div id="form-step-1" class="step-transition space-y-5">
+                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-brand-green/10 text-brand-green text-xs flex items-center justify-center font-bold">1</span>
+                            Datos Académicos
+                        </h3>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-brand-grayText mb-2" for="school-name">Centro Educativo *</label>
+                            <input required type="text" id="school-name" placeholder="Ej: Liceo Secundario República de Colombia" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors">
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-brand-grayText mb-2" for="regional">Regional Educativa *</label>
+                                <select required id="regional" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors">
+                                    <option value="" disabled selected>Selecciona</option>
+                                    <option>Regional 01 (Barahona)</option><option>Regional 02 (San Juan)</option>
+                                    <option>Regional 03 (Azua)</option><option>Regional 04 (San Cristóbal)</option>
+                                    <option>Regional 05 (San Pedro de Macorís)</option><option>Regional 06 (La Vega)</option>
+                                    <option>Regional 07 (SFM)</option><option>Regional 08 (Santiago)</option>
+                                    <option>Regional 09 (Mao)</option><option>Regional 10 (Sto. Dgo. II)</option>
+                                    <option>Regional 11 (Puerto Plata)</option><option>Regional 12 (Higüey)</option>
+                                    <option>Regional 13 (Montecristi)</option><option>Regional 14 (Nagua)</option>
+                                    <option>Regional 15 (Sto. Dgo. III)</option><option>Regional 16 (Cotuí)</option>
+                                    <option>Regional 17 (Monte Plata)</option><option>Regional 18 (Neyba)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-brand-grayText mb-2" for="distrito">Distrito Educativo *</label>
+                                <input required type="text" id="distrito" placeholder="Ej: Distrito 10-01" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-brand-grayText mb-2" for="nivel-educativo">Nivel Educativo *</label>
+                            <select required id="nivel-educativo" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors">
+                                <option value="" disabled selected>Selecciona</option>
+                                <option>Nivel Inicial</option><option>Nivel Primario - Primer Ciclo</option>
+                                <option>Nivel Primario - Segundo Ciclo</option><option>Nivel Secundario - Primer Ciclo</option>
+                                <option>Nivel Secundario - Segundo Ciclo</option><option>Educación de Adultos / Preparatoria</option>
+                            </select>
+                        </div>
+                        <div class="pt-4">
+                            <button type="button" onclick="goToStep(2)" class="w-full py-4 bg-brand-green hover:bg-brand-greenHover text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2">
+                                Continuar a Datos Personales <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="form-step-2" class="hidden step-transition space-y-5">
+                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full bg-brand-green/10 text-brand-green text-xs flex items-center justify-center font-bold">2</span>
+                            Datos Personales
+                        </h3>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-brand-grayText mb-2" for="teacher-name">Nombre Completo *</label>
+                            <input type="text" id="teacher-name" placeholder="Ej: María Mercedes Altagracia" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-brand-grayText mb-2" for="teacher-whatsapp">Número de WhatsApp *</label>
+                            <input type="tel" id="teacher-whatsapp" placeholder="Ej: 809-555-0199" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-brand-grayText mb-2" for="teacher-email">Correo Electrónico *</label>
+                            <input type="email" id="teacher-email" placeholder="Ej: maria.mercedes@dominicana.edu" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-green transition-colors">
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 pt-4">
+                            <button type="button" onclick="goToStep(1)" class="py-4 bg-brand-dark hover:bg-brand-card text-brand-grayText border border-brand-border font-bold rounded-xl transition-all">
+                                <i class="fa-solid fa-arrow-left"></i> Atrás
+                            </button>
+                            <button type="submit" class="col-span-2 py-4 bg-brand-green hover:bg-brand-greenHover text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 green-glow-intense">
+                                <i class="fa-brands fa-whatsapp"></i> Solicitar Agente
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-20">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Colegas que ya recuperaron su vida social</h2>
+                <p class="text-lg text-brand-grayText">Testimonios reales de docentes que se pasaron a Skios.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-brand-dark border border-brand-border rounded-xl flex flex-col justify-between">
+                    <p class="text-sm text-brand-grayText italic leading-relaxed">"Planificar matemáticas para quinto grado me tomaba casi todo el domingo. Ahora, acostada en el mueble, le mando un audio de 30 segundos y el lunes tengo todo listo en mi Google Drive."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#10B981]/20 text-[#10B981] flex items-center justify-center font-bold">AL</div>
+                        <div><h4 class="text-sm font-bold text-white">Ana Lidia Santana</h4><p class="text-xs text-brand-grayText">Escuela Primaria Padre Bini, Regional 08</p></div>
+                    </div>
+                </div>
+                <div class="p-6 bg-brand-dark border border-brand-border rounded-xl flex flex-col justify-between">
+                    <p class="text-sm text-brand-grayText italic leading-relaxed">"Las rúbricas de evaluación eran un dolor de cabeza. Con Skios tengo rúbricas de excelente nivel técnico. Además, paso la asistencia dictándole al celular mientras salgo del aula."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#10B981]/20 text-[#10B981] flex items-center justify-center font-bold">MH</div>
+                        <div><h4 class="text-sm font-bold text-white">Manuel Henríquez</h4><p class="text-xs text-brand-grayText">Liceo Emma Balaguer, Regional 10</p></div>
+                    </div>
+                </div>
+                <div class="p-6 bg-brand-dark border border-brand-border rounded-xl flex flex-col justify-between">
+                    <p class="text-sm text-brand-grayText italic leading-relaxed">"Pensaba que sería dificilísimo de configurar. Pero no tuvimos que instalar nada. Es literalmente un chat de WhatsApp. Todos los profesores del liceo lo dominamos sin capacitaciones."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#10B981]/20 text-[#10B981] flex items-center justify-center font-bold">RC</div>
+                        <div><h4 class="text-sm font-bold text-white">Rosaura Castillo</h4><p class="text-xs text-brand-grayText">Colegio Don Bosco, Regional 15</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-black border-t border-brand-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-green to-emerald-800 flex items-center justify-center text-white font-bold text-lg">S</div>
+                <div>
+                    <span class="text-lg font-extrabold tracking-tight text-white">SKIOS<span class="text-brand-green">.</span></span>
+                    <span class="text-[10px] block text-brand-grayText -mt-1 tracking-wider uppercase">Educativo RD</span>
+                </div>
+            </div>
+            <p class="text-xs text-brand-grayText text-center">&copy; 2026 Skios por DGtech. Domingo Guerra. Todos los derechos reservados.</p>
+            <div class="flex items-center gap-4 text-brand-grayText text-sm">
+                <a href="#como-funciona" class="hover:text-white transition-colors">Privacidad</a>
+                <span>•</span>
+                <a href="#solicitud" class="hover:text-white transition-colors">Soporte</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const simData = {
+            planificacion: {
+                placeholder: "Planificando ciencias sociales...",
+                teacherMsg: "Planifícame el mes de Ciencias de la Naturaleza de 5to de Primaria sobre el sistema digestivo.",
+                agentReply: "🧠 *Procesando solicitud de planificación...*\n\n✅ *Paso 1:* Extrayendo competencias del currículo MINERD para 5to grado.\n✅ *Paso 2:* Dividiendo el mes en 4 semanas didácticas.\n✅ *Paso 3:* Generando material y subiéndolo al Drive de tu escuela.\n\n📂 *¡Hecho!* Tu carpeta organizada y documentos listos:\n👉 drive.google.com/skios-rd/ciencias-5to-digestivo"
+            },
+            rubrica: {
+                placeholder: "Calculando escala estimativa...",
+                teacherMsg: "EduAgent, genera una rúbrica analítica para evaluar una exposición sobre la Independencia Nacional.",
+                agentReply: "📊 *Generando Rúbrica Analítica Exacta*\n\n*Criterios:* Dominio del tema (30%), Fluidez oral (25%), Recursos visuales (25%), Trabajo cooperativo (20%).\n\n📄 *Documento generado* con 4 escalas de estimación alineadas al MINERD.\n\n💾 Guardado en tu carpeta Rúbricas:\n👉 drive.google.com/skios-rd/rubrica-independencia-pdf"
+            },
+            asistencia: {
+                placeholder: "Sincronizando registro docente...",
+                teacherMsg: "Registra la asistencia de hoy en 6to de Primaria: faltaron Pamela Díaz y Ángel Rosario.",
+                agentReply: "📝 *Actualización de Asistencia Realizada*\n\n🔹 *Grupo:* 6to de Primaria - Sección A\n🔹 *Inasistencias:* Pamela Díaz (No. 8) y Ángel Rosario (No. 19).\n🔹 *Asistencias:* 28 alumnos presentes.\n\n✅ Registro oficial actualizado y guardado en tu Drive."
+            }
+        };
+
+        function triggerSim(key) {
+            const data = simData[key];
+            const chatArea = document.getElementById('chat-area');
+            const inputPlaceholder = document.getElementById('input-placeholder');
+            inputPlaceholder.innerText = data.placeholder;
+            document.querySelectorAll('.temp-msg').forEach(el => el.remove());
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const teacherBubble = document.createElement('div');
+            teacherBubble.className = "max-w-[85%] bg-[#005C4B] rounded-2xl p-3 text-sm text-white ml-auto relative temp-msg";
+            teacherBubble.innerHTML = `${data.teacherMsg}<span class="block text-[10px] text-emerald-200 text-right mt-1">${timeStr} <i class="fa-solid fa-check-double text-blue-400"></i></span>`;
+            chatArea.appendChild(teacherBubble);
+            chatArea.scrollTop = chatArea.scrollHeight;
+            const typingBubble = document.createElement('div');
+            typingBubble.className = "max-w-[85%] bg-[#202C33] rounded-2xl p-3 text-sm text-white relative temp-msg flex items-center gap-1.5";
+            typingBubble.id = "typing-bubble";
+            typingBubble.innerHTML = `<span class="animate-bounce inline-block w-2 h-2 rounded-full bg-brand-green"></span><span class="animate-bounce delay-100 inline-block w-2 h-2 rounded-full bg-brand-green"></span><span class="animate-bounce delay-200 inline-block w-2 h-2 rounded-full bg-brand-green"></span>`;
+            chatArea.appendChild(typingBubble);
+            chatArea.scrollTop = chatArea.scrollHeight;
+            setTimeout(() => {
+                const tb = document.getElementById('typing-bubble');
+                if (tb) tb.remove();
+                const agentBubble = document.createElement('div');
+                agentBubble.className = "max-w-[85%] bg-[#202C33] rounded-2xl p-3 text-sm text-white relative temp-msg leading-relaxed";
+                agentBubble.innerHTML = `${data.agentReply.replace(/\n/g, '<br>')}<span class="block text-[10px] text-brand-grayText text-right mt-1">${timeStr}</span>`;
+                chatArea.appendChild(agentBubble);
+                chatArea.scrollTop = chatArea.scrollHeight;
+                inputPlaceholder.innerText = "Escribe o presiona una acción...";
+            }, 1800);
+        }
+
+        function toggleAccordion(id) {
+            const accordion = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            if (accordion.classList.contains('hidden')) {
+                accordion.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                accordion.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        function goToStep(step) {
+            const step1 = document.getElementById('form-step-1');
+            const step2 = document.getElementById('form-step-2');
+            const dot1 = document.getElementById('dot-step-1');
+            const dot2 = document.getElementById('dot-step-2');
+            if (step === 2) {
+                const school = document.getElementById('school-name').value;
+                const regional = document.getElementById('regional').value;
+                const distrito = document.getElementById('distrito').value;
+                const nivel = document.getElementById('nivel-educativo').value;
+                if (!school || !regional || !distrito || !nivel) { alert("Por favor, completa todos los campos académicos."); return; }
+                step1.classList.add('hidden'); step2.classList.remove('hidden');
+                dot1.className = "w-2.5 h-2.5 rounded-full bg-brand-border";
+                dot2.className = "w-2.5 h-2.5 rounded-full bg-brand-green";
+            } else {
+                step2.classList.add('hidden'); step1.classList.remove('hidden');
+                dot1.className = "w-2.5 h-2.5 rounded-full bg-brand-green";
+                dot2.className = "w-2.5 h-2.5 rounded-full bg-brand-border";
+            }
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const school = document.getElementById('school-name').value;
+            const regional = document.getElementById('regional').value;
+            const distrito = document.getElementById('distrito').value;
+            const nivel = document.getElementById('nivel-educativo').value;
+            const name = document.getElementById('teacher-name').value;
+            const whatsappNum = document.getElementById('teacher-whatsapp').value;
+            const email = document.getElementById('teacher-email').value;
+            if (!name || !whatsappNum || !email) { alert("Por favor, completa tus datos personales."); return; }
+            const message = `¡Hola, Skios Educativo! 🇩🇴 Me interesa activar mi Agente Inteligente.\n\n*DATOS ACADÉMICOS*\n• Centro: ${school}\n• Regional: ${regional}\n• Distrito: ${distrito}\n• Nivel: ${nivel}\n\n*DATOS PERSONALES*\n• Nombre: ${name}\n• WhatsApp: ${whatsappNum}\n• Email: ${email}\n\n¡Quedo atento/a!`;
+            window.open(`https://wa.me/18296469885?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
